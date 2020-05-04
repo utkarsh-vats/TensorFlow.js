@@ -81,8 +81,10 @@ function mouseDragged() {
 function predict(x) {
     const xs = tf.tensor1d(x);
     // y = a*x^2 + b*x + c
-    // const ys = xs.square().mul(a).add(xs.mul(b)).add(c);
-    const ys = xs.square().mul(xs).mul(a).add(xs.square().mul(b)).add(xs.mul(c)).add(d);
+    const ys = xs.pow(tf.scalar(3)).mul(a)
+                .add(xs.square().mul(b))
+                .add(xs.mul(c))
+                .add(d);
     return ys;
 }
 
