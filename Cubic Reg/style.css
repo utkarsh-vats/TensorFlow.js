@@ -1,5 +1,35 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    max-width: 500px;
+  margin: auto;
+}
+body {
+  font-family: "Lato", sans-serif;
+ 
+}
+h1{
+font-size:40px;
+}
+.sidebar {
+  height:100%;
+  width: 200px;
+  position: fixed;
+  margin:0 auto;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+.sidebar a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+.main{
+    margin-left:200px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
