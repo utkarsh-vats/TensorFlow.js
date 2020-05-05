@@ -1,7 +1,95 @@
-*{
-    max-width: 500px;
-  margin: auto;
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Lato&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+.containing-window{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  margin: 0 0 100px 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 700px;
+  /* background-color: rgb(253, 234, 237); */
+  background-image: url("logo.jpg");
+  background-color: rgba(255, 255, 255, 0.6);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.cover {
+  width: 100%;
+  height: 30px;
+  border: 1px ;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(24, 198, 241, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.main {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  margin: 2px;
+  color: rgb(0,144,158);
+}
+
+.sidebar {
+  padding: 0 1rem 0 0;
+  /* border-right: 1px solid pink; */
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+.projects {
+  position: relative;
+  background: -webkit-linear-gradient(rgb(0, 53, 66), rgb(39, 206, 248));
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 10%;
+  font-size: 4rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 80px;
+  font-weight: 900;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.sketch-container {
+  border: 1px dotted palevioletred;
+}
+
+p {
+  max-width: 600px;
+  color: rgb(12, 37, 43);
+  padding-bottom: 1rem;
+}
+
+/*
 body {
   font-family: "Lato", sans-serif;
  
@@ -9,6 +97,7 @@ body {
 h1{
 font-size:40px;
 }
+
 .sidebar {
   height:100%;
   width: 200px;
@@ -32,4 +121,4 @@ font-size:40px;
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-}
+} */

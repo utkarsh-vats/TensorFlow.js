@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width initial-scale=1">
 	<title>Cubic Reg</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.dom.js"></script> -->
-	<script src= 
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"> 
-  </script> 
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
 </head>
 <body>
-        
-	<!--sidebar-->
-	<div class="sidebar">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">Types</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-</div>
-	
-<!--description-->
-	
-	    <!--Heading-->
-	<div class="main">
-  <h1>Cubic Regression</h1>
-  <h5>This is an example.</h5>
-         <div class="container"> 
-        <p> 
-      <span style="color:blue">gddhfh..........................</span> 
-      <button class='btn btn-success pull-right'> 
-        Button Text 
-          </button> 
-		 </p>
+	<i class="fad fa-alien-monster"></i>
+	<i class="fad fa-telescope"></i>
+	<div class="cover">
 	</div>
-</div>
-	<script type="text/javascript" src="sketch.js"></script>
+	<h1 class="projects">Projects</h1>
+	
+	
+	<div class="container">
+		<div class="containing-window">
+			<div class="sidebar">
+				<a href="#home">Home</a>
+				<a href="#">TensorFlow.js</a>
+				<a href="#">Linear Regression</a>
+				<a href="#">Polynomial Regression</a>
+				<a href="index.html">Cubic Regression</a>
+			</div>
+			<div class="main">
+				<h1 class="heading">TensorFlow.js</h1>
+				<br>
+				<h2 class="sub-heading">Cubic Regression</h2>
+				<br>
+				<p class="description">Cubic regression is useful when the line through plotted data which curves one way and then the other.
+					However, one problem with using cubic regression with assay analysis is that the determined curve might feature a turning
+					 point inside the range of the standards rendering parts of the curve unusable for concentration calculations.
+					<br>
+					Cubic regression follows the general equation:
+					<br>
+					<br>
+						y = ax^3 + bx^2 + cx + d
+					<br>
+					<br>
+					The following is a simple simulation for cubic regression.
+					<br>
+					Drag over the window to create real time data and observe as the graph adjusts itself.
+				</p>
+				<div id="sketch-container"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="sketch.js" id="sketch"></script>
+	<script src="https://kit.fontawesome.com/fced244f61.js" crossorigin="anonymous"></script>
 	<!-- <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script> -->
 </body>
 </html>

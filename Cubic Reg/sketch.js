@@ -1,4 +1,9 @@
 
+
+
+var wid = 600;
+var high = 600;
+
 var x_vals = [];
 var y_vals = [];
 
@@ -9,13 +14,19 @@ const learningRate = 0.2;
 const optimizer = tf.train.adam(learningRate);
 
 function setup() {
-    createCanvas(window.innerWidth, window.innerHeight);
-    // createCanvas(400, 400);
+    // createCanvas(window.innerWidth, window.innerHeight);
+    let cnv = createCanvas(wid, high);
+    cnv.parent('sketch-container');
     
-    a = tf.variable(tf.scalar(random(-1, 1)));
-    b = tf.variable(tf.scalar(random(-1, 1)));
-    c = tf.variable(tf.scalar(random(-1, 1)));
-    d = tf.variable(tf.scalar(random(-1, 1)));
+    // a = tf.variable(tf.scalar(random(-1, 1)));
+    // b = tf.variable(tf.scalar(random(-1, 1)));
+    // c = tf.variable(tf.scalar(random(-1, 1)));
+    // d = tf.variable(tf.scalar(random(-1, 1)));
+
+    a = tf.variable(tf.scalar(0));
+    b = tf.variable(tf.scalar(0));
+    c = tf.variable(tf.scalar(0));
+    d = tf.variable(tf.scalar(0));
     
 }
 
@@ -31,8 +42,8 @@ function draw() {
         }
     });
 
-    background(0);
-    stroke(255);
+    background(255);
+    stroke(0);
     strokeWeight(8);
     for(let i =0;i<x_vals.length;i++){
         let px = map(x_vals[i], -1, 1, 0, width);
@@ -41,7 +52,7 @@ function draw() {
     }
 
     const curveX = [];
-    for(let x = -1; x < 1; x+=0.05){
+    for(let x = -1; x < 1.01; x+=0.05){
         curveX.push(x);
     }
     const ys = tf.tidy(() => predict(curveX));
@@ -50,7 +61,7 @@ function draw() {
 
     beginShape();
     noFill();
-    stroke(255);
+    stroke(0,144,158);
     strokeWeight(2);
     for(let i = 0;i< curveX.length; i++){
         let x = map(curveX[i], -1, 1, 0, width);
@@ -59,8 +70,10 @@ function draw() {
     }
     endShape();
 
-    console.log(tf.memory().numTensors);
+    // console.log(tf.memory().numTensors);
     // noLoop();
+
+    rect(0, 0, wid, high);
 }
 
 function mouseDragged() {
