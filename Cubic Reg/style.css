@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 /* @import url('https://fonts.googleapis.com/css?family=Lato&display=swap'); */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
@@ -27,9 +28,18 @@ body {
   flex-direction: column;
   min-width: 700px;
   /* background-color: rgb(253, 234, 237); */
-  background-image: url("logo.jpg");
   background-color: rgba(255, 255, 255, 0.6);
   font-family: 'Source Sans Pro', sans-serif;
+
+  
+  background-image: url("background.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background-size: contain; */
+  background-size: cover;
+  z-index: -2;
+
 }
 
 .cover {
@@ -65,6 +75,8 @@ a {
 }
 
 .projects {
+  font-family: 'Abril Fatface', cursive;
+  color: rgb(0,144,158);
   position: relative;
   background: -webkit-linear-gradient(rgb(0, 53, 66), rgb(39, 206, 248));
   display: flex;
@@ -75,7 +87,7 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 80px;
-  font-weight: 900;
+  font-weight: 200;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -87,6 +99,16 @@ p {
   max-width: 600px;
   color: rgb(12, 37, 43);
   padding-bottom: 1rem;
+}
+
+.background {
+  background-image: url("logo2.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background-size: contain; */
+  background-size: contain;
+  z-index: -1;
 }
 
 /*
